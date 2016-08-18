@@ -1,0 +1,44 @@
+<head>
+  <title>WELCOME</title>
+</head>
+
+<body>
+  <h1>WELCOME</h1>
+  {{> video}}
+</body>
+
+<template name="video">
+  <h3>Broadcast?</h3>
+  <button id="startBroadcast"> Start BroadCast</button>
+  <button id="endBroadCast" disabled> End BroadCast</button>
+  <button id="startRecord" disabled>Record</button>
+  <button id="endRecord" disabled>Stop Recording</button>
+  <hr>
+  <h3>Just Viewing?</h3>
+  <select id="selectBroadcast">
+    <option value="">Select an Active Session</option>
+    {{#each activeBroadcasts}}
+      <option>{{_id}}</option>
+    {{/each}}
+  </select>
+  <button id="startView">Join BroadCast</button>
+  <button id="endView" disabled>Leave BroadCast</button>
+  <div>
+   <video id="liveVideo" autoplay width="640px" height="480px" poster="img/webrtc.png"></video>
+  </div>
+
+
+  <select id="selectVideo">
+    <option value="">Select an Video</option>
+    {{#each recordedVideos}}
+      <option url="{{md5}}">{{filename}}</option>
+    {{/each}}
+  </select>
+  <button id="playVideo">Play Video</button>
+  <button id="download" disabled>Download Video</button>
+  <div>
+   <video id="recordedVideo" autoplay preload="none" type="video/mp4" width="640px" height="480px" poster="img/webrtc.png">
+   </video>
+  </div>
+   
+</template>

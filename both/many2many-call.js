@@ -1,0 +1,1 @@
+videoStream = new Meteor.Stream('videoStream'); // stream (check github for Meteor streams for help)
