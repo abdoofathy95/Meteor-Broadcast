@@ -4,7 +4,7 @@ meteor web app that supports broadcasting (Many to Many) and viewing that broadc
 # Usage
 1. Download Kurento Media Server from [Kurento](https://www.kurento.org/)
 2. Start The Kurento Service (If on Ubuntu -> sudo service kurento start 
-3. Clone the project Or download and start Meteor app using (Meteor run). this app assumes that the media server is running on default port localhost:8888. to change please edit [Server.js] to a remote or local URL.
+3. Clone the project Or download and start Meteor app using (Meteor run). this app assumes that the media server is running on default port localhost:8888. to change please edit [Server.js]https://github.com/abdoofathy95/Meteor-Broadcast/blob/master/server/server.js to a remote or local URL.
 
 
 # Notes
